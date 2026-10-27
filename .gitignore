@@ -1,0 +1,29 @@
+# Xcode
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# CocoaPods (not used, but just in case)
+Pods/
+
+# Firebase — GoogleService-Info.plist contains API keys; add your own
+GoogleService-Info.plist
+
+# Environment / secrets
+*.env
+Secrets.swift
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride

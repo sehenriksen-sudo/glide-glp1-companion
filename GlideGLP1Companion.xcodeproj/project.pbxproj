@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02643335F458F2C8A6C3D467 /* MedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50A51FECD9BA57DB87C6F9B /* MedicationView.swift */; };
+		04BB1B5549AD2CE292BFB13D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F1E7470E229FC75E8B0D8575 /* FirebaseFirestore */; };
+		064A58A3B2F2A3BDEC103881 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF133FC61E16890770BABACD /* LiveActivityManager.swift */; };
+		07ECC9F639AC9794824C2BAF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A755B92F82A3E8DFFF24AC34 /* FirebaseStorage */; };
+		1249F3AC853D592C572CB9C6 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C32FF0675EDE9EB8CD126B5 /* ProfileEditView.swift */; };
+		1499A00F9BD78D7E8DEE495A /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0417A122DF507BD98FE0F /* NotificationSettingsView.swift */; };
+		1D2F719A035A79916C759FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10AFC9FEC85A336C07404372 /* Assets.xcassets */; };
+		2049BCB15C59484F0E3BD6C5 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682308D3B8BFB4E373491B21 /* PaywallView.swift */; };
+		29FC0C12038211DDA19EC074 /* MedicationActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8651B1EE8DBC4AC31CF36 /* MedicationActivityAttributes.swift */; };
+		29FC651E86570A2DCEEDD910 /* GlideWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8CBDA7A49CAFCE97A5CFD021 /* GlideWidget.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		331A506C7BEDB38A541618CF /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E11F6BCCF72F937550D64 /* NotificationManager.swift */; };
+		33382385494109C06C1F0EC5 /* SharedMedicationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44527F3982794BF66C141FF7 /* SharedMedicationStore.swift */; };
+		3379585AE65FA2127C5AFCEA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA535C63C53CF5FB71935F0 /* MainTabView.swift */; };
+		3CD61EBCC77B1153513CA589 /* AppReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AC34805C19613CB46D7B7 /* AppReviewManager.swift */; };
+		424B9421B488C90C54DB73EC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87669320663CCFBCEDBF7B5C /* WidgetKit.framework */; };
+		45B0D9229EF6951AE59C6378 /* GlideLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E261672CC26B644C6E6E3CE0 /* GlideLiveActivity.swift */; };
+		49F38E7A133DE3861FAA1F7C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9225ADB8E84012DDC5E2CFED /* SwiftUI.framework */; };
+		4A2CD649906CB427F639BEAF /* MedicationActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE8651B1EE8DBC4AC31CF36 /* MedicationActivityAttributes.swift */; };
+		4CA3F4C406AC3616839C3555 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E5881CDE6957082156EEDA0D /* FirebaseAuth */; };
+		508F878A2E49941731490E81 /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C68FB66278BFE87376566B /* NutritionView.swift */; };
+		53D67B70AD243AFAC417835F /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698B44DB0ECDED1B794DDFAA /* HealthKitManager.swift */; };
+		5B39EF3B9D0DF05EC33F7EAB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C2976915DB7FEAF25D05BE /* SettingsView.swift */; };
+		5EBEF952184F7A9D827638C2 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 2F5A0C0C530E7CC6334E4725 /* RevenueCat */; };
+		67B1F5E18DB8C4DA5A7DCAFF /* SharedMedicationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44527F3982794BF66C141FF7 /* SharedMedicationStore.swift */; };
+		6FD2F7471BA421E2E2CBF1B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48252A2EF19A6614605D2FA /* Assets.xcassets */; };
+		7D11C880A9DB8C84DC2113BB /* ExerciseLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004842FCD6B964E771676408 /* ExerciseLogView.swift */; };
+		8075E3431EA4F0E37F96B937 /* PremiumGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA0F8CEEA3CF59947A941B /* PremiumGate.swift */; };
+		823AC8B89DDE7B419EB0199E /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F85446E2470998BC01F90C3 /* ChatManager.swift */; };
+		83FD4149B86977AB104ECD33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D521871A0511A5F6B95BC /* ContentView.swift */; };
+		8952CEC3E6FB631C6C78BC0A /* SpotlightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCDF9AFAC4A654A75D5BE52 /* SpotlightManager.swift */; };
+		8A400FD90465CC0F5466CD74 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B69A71F38CF738656A6DFFE /* UserProfile.swift */; };
+		8C7DD6D8781B93CC90AA2FED /* BackgroundTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348B567C6EC7AF3FFAF93C55 /* BackgroundTaskManager.swift */; };
+		9B3125FCBFD7A0EDAC6C00A0 /* GlideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961670E867188CCC71C1342E /* GlideApp.swift */; };
+		9F9120A2F18CB9775BA50981 /* GlideAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442366E60C5D6426DCF92D09 /* GlideAppDelegate.swift */; };
+		A2045EC11B8A338F9FAC98C0 /* MedicationConcentrationChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625253FAF36E61615714A852 /* MedicationConcentrationChart.swift */; };
+		A57A69DE4CA7048963645453 /* AppIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4FE9652499B1D1757E482 /* AppIntents.swift */; };
+		A81257A25DF086D534764847 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58072CA3B84F9CE1CA9E2109 /* DashboardView.swift */; };
+		A94EC38222BD7883B9F7DDAC /* DataExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277B641D86AAC326AFD7D492 /* DataExportView.swift */; };
+		B09A96170F4CE2FF713830C0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F71524400C7B08F2C761D /* OnboardingView.swift */; };
+		B67D5E897B1893B6C1077CD6 /* GlideWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E16574A3E54F4B8F4B6FE /* GlideWidget.swift */; };
+		B89149DFD0D215F3AC6B5D46 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD2F2D7F9CA04FD41D8AD4 /* CommunityView.swift */; };
+		BF52E4D4BB0D88DB8D99EF9B /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF98F63D9094245E18E7AB9 /* ActivityKit.framework */; };
+		C9244808648B11A9157C5276 /* DeepLinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519A701B1B950C2055AEFD6 /* DeepLinkRouter.swift */; };
+		CE411D2F99CA0977DB464506 /* LocalPrivacyNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9A2D995C79E83282EFFB8 /* LocalPrivacyNote.swift */; };
+		E7784BE7BB24463ADD206DBC /* GLP1Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292D0A612EB1A71765AA955B /* GLP1Medication.swift */; };
+		EB7E3955C9E8D588B38E2CDA /* SwiftDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C055BCBF282FCC85FF2B4 /* SwiftDataModels.swift */; };
+		EBE38388B21CCA27D3DBDA59 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E237DE7F216E59E4F8674D /* SubscriptionManager.swift */; };
+		F977C55B8692C7C0F72FA842 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAEE024AB0E9A8FE803F88A /* HapticManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DD8865B7C6F1B8BC01E4E6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03FF9496BE2206893076CF0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40A3803CA79C9E5BEBBFDCCA;
+			remoteInfo = GlideWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		875B1841CF2267F57FC7C5B1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				29FC651E86570A2DCEEDD910 /* GlideWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		004842FCD6B964E771676408 /* ExerciseLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLogView.swift; sourceTree = "<group>"; };
+		0C32FF0675EDE9EB8CD126B5 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		10AFC9FEC85A336C07404372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		115D521871A0511A5F6B95BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1F023C11695BDB570CDB24E5 /* GlideGLP1Companion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GlideGLP1Companion.entitlements; sourceTree = "<group>"; };
+		277B641D86AAC326AFD7D492 /* DataExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExportView.swift; sourceTree = "<group>"; };
+		292D0A612EB1A71765AA955B /* GLP1Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLP1Medication.swift; sourceTree = "<group>"; };
+		2D4AC34805C19613CB46D7B7 /* AppReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewManager.swift; sourceTree = "<group>"; };
+		2DCDF9AFAC4A654A75D5BE52 /* SpotlightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightManager.swift; sourceTree = "<group>"; };
+		348B567C6EC7AF3FFAF93C55 /* BackgroundTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTaskManager.swift; sourceTree = "<group>"; };
+		442366E60C5D6426DCF92D09 /* GlideAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlideAppDelegate.swift; sourceTree = "<group>"; };
+		44527F3982794BF66C141FF7 /* SharedMedicationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedMedicationStore.swift; sourceTree = "<group>"; };
+		4EE8651B1EE8DBC4AC31CF36 /* MedicationActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationActivityAttributes.swift; sourceTree = "<group>"; };
+		4EEA0F8CEEA3CF59947A941B /* PremiumGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumGate.swift; sourceTree = "<group>"; };
+		4F4B0E3F767A9EC66C378135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		58072CA3B84F9CE1CA9E2109 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		625253FAF36E61615714A852 /* MedicationConcentrationChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationConcentrationChart.swift; sourceTree = "<group>"; };
+		665E3AE2526CEFFCAF17ADC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		682308D3B8BFB4E373491B21 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		698B44DB0ECDED1B794DDFAA /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		6B69A71F38CF738656A6DFFE /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		6BA535C63C53CF5FB71935F0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		7F85446E2470998BC01F90C3 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		812DF075A08B8CE582B4672B /* GlideGLP1Companion.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GlideGLP1Companion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81C2976915DB7FEAF25D05BE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		87669320663CCFBCEDBF7B5C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		8CBDA7A49CAFCE97A5CFD021 /* GlideWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = GlideWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9225ADB8E84012DDC5E2CFED /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		961670E867188CCC71C1342E /* GlideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlideApp.swift; sourceTree = "<group>"; };
+		96C68FB66278BFE87376566B /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
+		A48252A2EF19A6614605D2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A50A51FECD9BA57DB87C6F9B /* MedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationView.swift; sourceTree = "<group>"; };
+		A91E11F6BCCF72F937550D64 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		AEBD2F2D7F9CA04FD41D8AD4 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		BBA4FE9652499B1D1757E482 /* AppIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntents.swift; sourceTree = "<group>"; };
+		BF133FC61E16890770BABACD /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
+		C3D0417A122DF507BD98FE0F /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
+		D05C055BCBF282FCC85FF2B4 /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
+		D0D90E0032323A993FB89E1E /* GlideWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GlideWidget.entitlements; sourceTree = "<group>"; };
+		D9E237DE7F216E59E4F8674D /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		DBAEE024AB0E9A8FE803F88A /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		DC2F71524400C7B08F2C761D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DDF98F63D9094245E18E7AB9 /* ActivityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActivityKit.framework; path = System/Library/Frameworks/ActivityKit.framework; sourceTree = SDKROOT; };
+		DEC9A2D995C79E83282EFFB8 /* LocalPrivacyNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPrivacyNote.swift; sourceTree = "<group>"; };
+		E261672CC26B644C6E6E3CE0 /* GlideLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlideLiveActivity.swift; sourceTree = "<group>"; };
+		E519A701B1B950C2055AEFD6 /* DeepLinkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkRouter.swift; sourceTree = "<group>"; };
+		FE7E16574A3E54F4B8F4B6FE /* GlideWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlideWidget.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18D6AB1429B815BD0008FD93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				424B9421B488C90C54DB73EC /* WidgetKit.framework in Frameworks */,
+				49F38E7A133DE3861FAA1F7C /* SwiftUI.framework in Frameworks */,
+				BF52E4D4BB0D88DB8D99EF9B /* ActivityKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD261D70659AE46671B8EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EBEF952184F7A9D827638C2 /* RevenueCat in Frameworks */,
+				4CA3F4C406AC3616839C3555 /* FirebaseAuth in Frameworks */,
+				04BB1B5549AD2CE292BFB13D /* FirebaseFirestore in Frameworks */,
+				07ECC9F639AC9794824C2BAF /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12EFB2BF6C7A5ED9A70D0586 = {
+			isa = PBXGroup;
+			children = (
+				8FC4A71036A872573AC0FD72 /* GlideGLP1Companion */,
+				819CCC8F4D7755E3D1926CF7 /* GlideWidget */,
+				8DF1D123E9D63AA126FE240A /* Shared */,
+				C1E8AEE06D8BD7A247D9709F /* Frameworks */,
+				49F215F5FAC6717419266E72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49F215F5FAC6717419266E72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				812DF075A08B8CE582B4672B /* GlideGLP1Companion.app */,
+				8CBDA7A49CAFCE97A5CFD021 /* GlideWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		819CCC8F4D7755E3D1926CF7 /* GlideWidget */ = {
+			isa = PBXGroup;
+			children = (
+				A48252A2EF19A6614605D2FA /* Assets.xcassets */,
+				E261672CC26B644C6E6E3CE0 /* GlideLiveActivity.swift */,
+				D0D90E0032323A993FB89E1E /* GlideWidget.entitlements */,
+				FE7E16574A3E54F4B8F4B6FE /* GlideWidget.swift */,
+				665E3AE2526CEFFCAF17ADC0 /* Info.plist */,
+			);
+			path = GlideWidget;
+			sourceTree = "<group>";
+		};
+		8DF1D123E9D63AA126FE240A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4EE8651B1EE8DBC4AC31CF36 /* MedicationActivityAttributes.swift */,
+				44527F3982794BF66C141FF7 /* SharedMedicationStore.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8FC4A71036A872573AC0FD72 /* GlideGLP1Companion */ = {
+			isa = PBXGroup;
+			children = (
+				BBA4FE9652499B1D1757E482 /* AppIntents.swift */,
+				2D4AC34805C19613CB46D7B7 /* AppReviewManager.swift */,
+				10AFC9FEC85A336C07404372 /* Assets.xcassets */,
+				348B567C6EC7AF3FFAF93C55 /* BackgroundTaskManager.swift */,
+				7F85446E2470998BC01F90C3 /* ChatManager.swift */,
+				AEBD2F2D7F9CA04FD41D8AD4 /* CommunityView.swift */,
+				115D521871A0511A5F6B95BC /* ContentView.swift */,
+				58072CA3B84F9CE1CA9E2109 /* DashboardView.swift */,
+				277B641D86AAC326AFD7D492 /* DataExportView.swift */,
+				E519A701B1B950C2055AEFD6 /* DeepLinkRouter.swift */,
+				004842FCD6B964E771676408 /* ExerciseLogView.swift */,
+				961670E867188CCC71C1342E /* GlideApp.swift */,
+				442366E60C5D6426DCF92D09 /* GlideAppDelegate.swift */,
+				1F023C11695BDB570CDB24E5 /* GlideGLP1Companion.entitlements */,
+				292D0A612EB1A71765AA955B /* GLP1Medication.swift */,
+				DBAEE024AB0E9A8FE803F88A /* HapticManager.swift */,
+				698B44DB0ECDED1B794DDFAA /* HealthKitManager.swift */,
+				4F4B0E3F767A9EC66C378135 /* Info.plist */,
+				BF133FC61E16890770BABACD /* LiveActivityManager.swift */,
+				DEC9A2D995C79E83282EFFB8 /* LocalPrivacyNote.swift */,
+				6BA535C63C53CF5FB71935F0 /* MainTabView.swift */,
+				625253FAF36E61615714A852 /* MedicationConcentrationChart.swift */,
+				A50A51FECD9BA57DB87C6F9B /* MedicationView.swift */,
+				A91E11F6BCCF72F937550D64 /* NotificationManager.swift */,
+				C3D0417A122DF507BD98FE0F /* NotificationSettingsView.swift */,
+				96C68FB66278BFE87376566B /* NutritionView.swift */,
+				DC2F71524400C7B08F2C761D /* OnboardingView.swift */,
+				682308D3B8BFB4E373491B21 /* PaywallView.swift */,
+				4EEA0F8CEEA3CF59947A941B /* PremiumGate.swift */,
+				0C32FF0675EDE9EB8CD126B5 /* ProfileEditView.swift */,
+				81C2976915DB7FEAF25D05BE /* SettingsView.swift */,
+				2DCDF9AFAC4A654A75D5BE52 /* SpotlightManager.swift */,
+				D9E237DE7F216E59E4F8674D /* SubscriptionManager.swift */,
+				D05C055BCBF282FCC85FF2B4 /* SwiftDataModels.swift */,
+				6B69A71F38CF738656A6DFFE /* UserProfile.swift */,
+			);
+			path = GlideGLP1Companion;
+			sourceTree = "<group>";
+		};
+		C1E8AEE06D8BD7A247D9709F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDF98F63D9094245E18E7AB9 /* ActivityKit.framework */,
+				9225ADB8E84012DDC5E2CFED /* SwiftUI.framework */,
+				87669320663CCFBCEDBF7B5C /* WidgetKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0466C5241A6F61AA20CE6185 /* GlideGLP1Companion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F76BCB6AB7B475472C3FBD3 /* Build configuration list for PBXNativeTarget "GlideGLP1Companion" */;
+			buildPhases = (
+				15EED941CAFCB0EAD370BACC /* Sources */,
+				1B23AA1E47258ED9088FF105 /* Resources */,
+				4CD261D70659AE46671B8EFF /* Frameworks */,
+				875B1841CF2267F57FC7C5B1 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB17D48934883C62A33B694E /* PBXTargetDependency */,
+			);
+			name = GlideGLP1Companion;
+			packageProductDependencies = (
+				2F5A0C0C530E7CC6334E4725 /* RevenueCat */,
+				E5881CDE6957082156EEDA0D /* FirebaseAuth */,
+				F1E7470E229FC75E8B0D8575 /* FirebaseFirestore */,
+				A755B92F82A3E8DFFF24AC34 /* FirebaseStorage */,
+			);
+			productName = GlideGLP1Companion;
+			productReference = 812DF075A08B8CE582B4672B /* GlideGLP1Companion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40A3803CA79C9E5BEBBFDCCA /* GlideWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0226C829823DB2AFBF0A5B7F /* Build configuration list for PBXNativeTarget "GlideWidget" */;
+			buildPhases = (
+				69204D2E695BE67A47CB4E02 /* Sources */,
+				C50308190BAB316FBAE522A8 /* Resources */,
+				18D6AB1429B815BD0008FD93 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlideWidget;
+			packageProductDependencies = (
+			);
+			productName = GlideWidget;
+			productReference = 8CBDA7A49CAFCE97A5CFD021 /* GlideWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03FF9496BE2206893076CF0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0466C5241A6F61AA20CE6185 = {
+						DevelopmentTeam = "";
+					};
+					40A3803CA79C9E5BEBBFDCCA = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 9142EE90A7E74EB81BEA0126 /* Build configuration list for PBXProject "GlideGLP1Companion" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 12EFB2BF6C7A5ED9A70D0586;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D9F834BC1C7FDFFD61FB3C76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				05BC6714170E48EA58E543B0 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 49F215F5FAC6717419266E72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0466C5241A6F61AA20CE6185 /* GlideGLP1Companion */,
+				40A3803CA79C9E5BEBBFDCCA /* GlideWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B23AA1E47258ED9088FF105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2F719A035A79916C759FA9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C50308190BAB316FBAE522A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD2F7471BA421E2E2CBF1B9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15EED941CAFCB0EAD370BACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A57A69DE4CA7048963645453 /* AppIntents.swift in Sources */,
+				3CD61EBCC77B1153513CA589 /* AppReviewManager.swift in Sources */,
+				8C7DD6D8781B93CC90AA2FED /* BackgroundTaskManager.swift in Sources */,
+				823AC8B89DDE7B419EB0199E /* ChatManager.swift in Sources */,
+				B89149DFD0D215F3AC6B5D46 /* CommunityView.swift in Sources */,
+				83FD4149B86977AB104ECD33 /* ContentView.swift in Sources */,
+				A81257A25DF086D534764847 /* DashboardView.swift in Sources */,
+				A94EC38222BD7883B9F7DDAC /* DataExportView.swift in Sources */,
+				C9244808648B11A9157C5276 /* DeepLinkRouter.swift in Sources */,
+				7D11C880A9DB8C84DC2113BB /* ExerciseLogView.swift in Sources */,
+				E7784BE7BB24463ADD206DBC /* GLP1Medication.swift in Sources */,
+				9B3125FCBFD7A0EDAC6C00A0 /* GlideApp.swift in Sources */,
+				9F9120A2F18CB9775BA50981 /* GlideAppDelegate.swift in Sources */,
+				F977C55B8692C7C0F72FA842 /* HapticManager.swift in Sources */,
+				53D67B70AD243AFAC417835F /* HealthKitManager.swift in Sources */,
+				064A58A3B2F2A3BDEC103881 /* LiveActivityManager.swift in Sources */,
+				CE411D2F99CA0977DB464506 /* LocalPrivacyNote.swift in Sources */,
+				3379585AE65FA2127C5AFCEA /* MainTabView.swift in Sources */,
+				4A2CD649906CB427F639BEAF /* MedicationActivityAttributes.swift in Sources */,
+				A2045EC11B8A338F9FAC98C0 /* MedicationConcentrationChart.swift in Sources */,
+				02643335F458F2C8A6C3D467 /* MedicationView.swift in Sources */,
+				331A506C7BEDB38A541618CF /* NotificationManager.swift in Sources */,
+				1499A00F9BD78D7E8DEE495A /* NotificationSettingsView.swift in Sources */,
+				508F878A2E49941731490E81 /* NutritionView.swift in Sources */,
+				B09A96170F4CE2FF713830C0 /* OnboardingView.swift in Sources */,
+				2049BCB15C59484F0E3BD6C5 /* PaywallView.swift in Sources */,
+				8075E3431EA4F0E37F96B937 /* PremiumGate.swift in Sources */,
+				1249F3AC853D592C572CB9C6 /* ProfileEditView.swift in Sources */,
+				5B39EF3B9D0DF05EC33F7EAB /* SettingsView.swift in Sources */,
+				33382385494109C06C1F0EC5 /* SharedMedicationStore.swift in Sources */,
+				8952CEC3E6FB631C6C78BC0A /* SpotlightManager.swift in Sources */,
+				EBE38388B21CCA27D3DBDA59 /* SubscriptionManager.swift in Sources */,
+				EB7E3955C9E8D588B38E2CDA /* SwiftDataModels.swift in Sources */,
+				8A400FD90465CC0F5466CD74 /* UserProfile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69204D2E695BE67A47CB4E02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45B0D9229EF6951AE59C6378 /* GlideLiveActivity.swift in Sources */,
+				B67D5E897B1893B6C1077CD6 /* GlideWidget.swift in Sources */,
+				29FC0C12038211DDA19EC074 /* MedicationActivityAttributes.swift in Sources */,
+				67B1F5E18DB8C4DA5A7DCAFF /* SharedMedicationStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB17D48934883C62A33B694E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40A3803CA79C9E5BEBBFDCCA /* GlideWidget */;
+			targetProxy = 9DD8865B7C6F1B8BC01E4E6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B3189932FBD863FBCDC2BF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GlideWidget/GlideWidget.entitlements;
+				INFOPLIST_FILE = GlideWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.glide.app.widget;
+				PRODUCT_NAME = GlideWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		153209FE467247BBB275613D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3AB99ACAFE21AD7460EFE454 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		739C64911CD2480A8E08ABF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GlideGLP1Companion/GlideGLP1Companion.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = GlideGLP1Companion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.glide.app;
+				PRODUCT_NAME = Glide;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		931ECF456B6CB25EEBAABF03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GlideWidget/GlideWidget.entitlements;
+				INFOPLIST_FILE = GlideWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.glide.app.widget;
+				PRODUCT_NAME = GlideWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		954C996F5B84ABDD9F27A301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GlideGLP1Companion/GlideGLP1Companion.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = GlideGLP1Companion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.glide.app;
+				PRODUCT_NAME = Glide;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0226C829823DB2AFBF0A5B7F /* Build configuration list for PBXNativeTarget "GlideWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3189932FBD863FBCDC2BF4 /* Debug */,
+				931ECF456B6CB25EEBAABF03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4F76BCB6AB7B475472C3FBD3 /* Build configuration list for PBXNativeTarget "GlideGLP1Companion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				954C996F5B84ABDD9F27A301 /* Debug */,
+				739C64911CD2480A8E08ABF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9142EE90A7E74EB81BEA0126 /* Build configuration list for PBXProject "GlideGLP1Companion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				153209FE467247BBB275613D /* Debug */,
+				3AB99ACAFE21AD7460EFE454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05BC6714170E48EA58E543B0 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D9F834BC1C7FDFFD61FB3C76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F5A0C0C530E7CC6334E4725 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05BC6714170E48EA58E543B0 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+		A755B92F82A3E8DFFF24AC34 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9F834BC1C7FDFFD61FB3C76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		E5881CDE6957082156EEDA0D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9F834BC1C7FDFFD61FB3C76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F1E7470E229FC75E8B0D8575 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9F834BC1C7FDFFD61FB3C76 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 03FF9496BE2206893076CF0D /* Project object */;
+}
