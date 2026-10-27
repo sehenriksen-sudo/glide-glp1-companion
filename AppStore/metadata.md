@@ -13,6 +13,7 @@
 | Age Rating         | 12+                                    |
 | Price              | Free                                   |
 | In-App Purchase    | Glide Premium — Monthly / Annual       |
+| Privacy Policy URL | https://sehenriksen-sudo.github.io/glide-site/privacy.html |
 
 ---
 

@@ -179,7 +179,7 @@ notify you via an in-app notice.
 Questions or requests regarding your privacy:
 
 **Email:** privacy@glideapp.io *(update with your real address before publishing)*
-**Website:** https://glideapp.io/privacy *(update with your real URL — required by App Store)*
+**Website:** https://sehenriksen-sudo.github.io/glide-site/privacy.html
 
 ---
 
