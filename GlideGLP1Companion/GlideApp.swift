@@ -40,7 +40,14 @@ struct GlideApp: App {
 
     // ── Background task registration + Firebase (must happen at init time) ─
     init() {
-        FirebaseApp.configure()         // reads GoogleService-Info.plist
+        // Only configure Firebase when a real GoogleService-Info.plist is present.
+        // Replace the placeholder file before enabling community features.
+        if let path = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
+           let plist = NSDictionary(contentsOfFile: path),
+           let appID = plist["GOOGLE_APP_ID"] as? String,
+           !appID.contains("REPLACE_ME") {
+            FirebaseApp.configure()
+        }
         BackgroundTaskManager().registerHandlers()
     }
 

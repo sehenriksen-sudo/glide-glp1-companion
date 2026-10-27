@@ -71,8 +71,8 @@ final class GLP1Medication: Identifiable, Codable {
     init(
         id: UUID = UUID(),
         medicationType: GLP1MedicationType,
-        shotDate: Date = .now,
         doseMg: Double,
+        shotDate: Date = .now,
         halfLifeDays: Double = 5.0
     ) {
         self.id = id
@@ -154,5 +154,23 @@ final class GLP1Medication: Identifiable, Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, medicationType, shotDate, doseMg, halfLifeDays
+    }
+
+    required init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id             = try c.decode(UUID.self,               forKey: .id)
+        medicationType = try c.decode(GLP1MedicationType.self, forKey: .medicationType)
+        shotDate       = try c.decode(Date.self,               forKey: .shotDate)
+        doseMg         = try c.decode(Double.self,             forKey: .doseMg)
+        halfLifeDays   = try c.decode(Double.self,             forKey: .halfLifeDays)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encode(id,             forKey: .id)
+        try c.encode(medicationType, forKey: .medicationType)
+        try c.encode(shotDate,       forKey: .shotDate)
+        try c.encode(doseMg,         forKey: .doseMg)
+        try c.encode(halfLifeDays,   forKey: .halfLifeDays)
     }
 }

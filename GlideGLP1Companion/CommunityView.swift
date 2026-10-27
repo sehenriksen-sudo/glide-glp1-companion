@@ -636,7 +636,15 @@ private struct MessageBubble: View {
                     .font(.system(size: 15))
                     .padding(.horizontal, 14)
                     .padding(.vertical, 10)
-                    .background(bubbleBackground, in: BubbleShape(isMine: isMine))
+                    .background {
+                        if isMine {
+                            BubbleShape(isMine: true)
+                                .fill(LinearGradient(colors: [.blue, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        } else {
+                            BubbleShape(isMine: false)
+                                .fill(Color(.systemGray5))
+                        }
+                    }
                     .foregroundStyle(isMine ? .white : .primary)
                     .fixedSize(horizontal: false, vertical: true)
 
@@ -651,18 +659,6 @@ private struct MessageBubble: View {
         .padding(.vertical, 2)
     }
 
-    @ViewBuilder
-    private var bubbleBackground: some View {
-        if isMine {
-            LinearGradient(
-                colors: [.blue, .indigo],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        } else {
-            Color(.systemGray5)
-        }
-    }
 }
 
 // MARK: - Chat bubble shape

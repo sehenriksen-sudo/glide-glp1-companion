@@ -335,8 +335,9 @@ private struct MiniActivitySparkline: View {
 #Preview("Lock Screen — Protected", as: .content,
          using: MedicationActivityAttributes(
             medicationType: "Semaglutide",
+            doseMg: 1.0,
             shotDate: Calendar.current.date(byAdding: .day, value: -3, to: .now)!,
-            doseMg: 1.0, halfLifeDays: 7.0
+            halfLifeDays: 7.0
          )
 ) {
     GlideLiveActivityConfiguration()
@@ -345,7 +346,7 @@ private struct MiniActivitySparkline: View {
     MedicationActivityAttributes.ContentState(
         concentration:     0.707,
         isInFoodNoiseZone: false,
-        crossoverDate:     Calendar.current.date(byAdding: .day, value: 2, to: .now),
+        crossoverDate:     Calendar.current.date(byAdding: .day, value: 4, to: .now),
         nextDoseDate:      Calendar.current.date(byAdding: .day, value: 4, to: .now)!,
         staleDate:         Date.now.addingTimeInterval(2 * 3_600)
     )
@@ -354,8 +355,7 @@ private struct MiniActivitySparkline: View {
 #Preview("Lock Screen — Food Noise Zone", as: .content,
          using: MedicationActivityAttributes(
             medicationType: "Tirzepatide",
-            shotDate: Calendar.current.date(byAdding: .day, value: -5, to: .now)!,
-            doseMg: 5.0, halfLifeDays: 5.0
+            doseMg: 5.0, shotDate: Calendar.current.date(byAdding: .day, value: -5, to: .now)!, halfLifeDays: 5.0
          )
 ) {
     GlideLiveActivityConfiguration()
@@ -373,8 +373,9 @@ private struct MiniActivitySparkline: View {
 #Preview("Dynamic Island — Protected", as: .dynamicIsland(.expanded),
          using: MedicationActivityAttributes(
             medicationType: "Semaglutide",
+            doseMg: 1.0,
             shotDate: Calendar.current.date(byAdding: .day, value: -3, to: .now)!,
-            doseMg: 1.0, halfLifeDays: 7.0
+            halfLifeDays: 7.0
          )
 ) {
     GlideLiveActivityConfiguration()
@@ -391,8 +392,9 @@ private struct MiniActivitySparkline: View {
 #Preview("Dynamic Island — Food Noise Zone", as: .dynamicIsland(.expanded),
          using: MedicationActivityAttributes(
             medicationType: "Tirzepatide",
+            doseMg: 5.0,
             shotDate: Calendar.current.date(byAdding: .day, value: -5, to: .now)!,
-            doseMg: 5.0, halfLifeDays: 5.0
+            halfLifeDays: 5.0
          )
 ) {
     GlideLiveActivityConfiguration()
@@ -409,8 +411,9 @@ private struct MiniActivitySparkline: View {
 #Preview("Dynamic Island Compact — Protected", as: .dynamicIsland(.compact),
          using: MedicationActivityAttributes(
             medicationType: "Semaglutide",
+            doseMg: 1.0,
             shotDate: Calendar.current.date(byAdding: .day, value: -3, to: .now)!,
-            doseMg: 1.0, halfLifeDays: 7.0
+            halfLifeDays: 7.0
          )
 ) {
     GlideLiveActivityConfiguration()
@@ -427,8 +430,9 @@ private struct MiniActivitySparkline: View {
 #Preview("Dynamic Island Minimal — Food Noise", as: .dynamicIsland(.minimal),
          using: MedicationActivityAttributes(
             medicationType: "Tirzepatide",
+            doseMg: 5.0,
             shotDate: Calendar.current.date(byAdding: .day, value: -5, to: .now)!,
-            doseMg: 5.0, halfLifeDays: 5.0
+            halfLifeDays: 5.0
          )
 ) {
     GlideLiveActivityConfiguration()

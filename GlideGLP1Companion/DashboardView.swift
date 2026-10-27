@@ -142,7 +142,7 @@ struct DashboardView: View {
                     // Concentration bar
                     VStack(alignment: .leading, spacing: 6) {
                         HStack {
-                            Text(log.workoutType.isEmpty ? log.medicationType : log.medicationType)
+                            Text(log.medicationType)
                                 .font(.system(size: 13, weight: .medium))
                                 .foregroundStyle(.secondary)
                             Spacer()
@@ -700,105 +700,6 @@ private struct AddWeightSheet: View {
                 }
             }
         }
-    }
-}
-
-private struct AddFoodSheet: View {
-    @Environment(\.modelContext) private var context
-    @Environment(\.dismiss)      private var dismiss
-    @State private var name     = ""
-    @State private var calories = ""
-    @State private var protein  = ""
-    @State private var carbs    = ""
-    @State private var fat      = ""
-
-    var body: some View {
-        NavigationStack {
-            Form {
-                Section("Meal") {
-                    TextField("Meal name", text: $name)
-                }
-                Section("Macros") {
-                    macroField("Calories", text: $calories, unit: "kcal")
-                    macroField("Protein",  text: $protein,  unit: "g")
-                    macroField("Carbs",    text: $carbs,    unit: "g")
-                    macroField("Fat",      text: $fat,      unit: "g")
-                }
-            }
-            .navigationTitle("Log Meal")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") {
-                        let log = FoodLog(
-                            mealName: name.isEmpty ? "Meal" : name,
-                            calories: Int(calories) ?? 0,
-                            protein:  Int(protein)  ?? 0,
-                            carbs:    Int(carbs)    ?? 0,
-                            fat:      Int(fat)      ?? 0
-                        )
-                        context.insert(log)
-                        try? context.save()
-                        dismiss()
-                    }
-                    .fontWeight(.semibold)
-                }
-            }
-        }
-    }
-
-    private func macroField(_ label: String, text: Binding<String>, unit: String) -> some View {
-        HStack {
-            Text(label)
-            Spacer()
-            TextField("0", text: text).keyboardType(.numberPad).multilineTextAlignment(.trailing)
-            Text(unit).foregroundStyle(.secondary)
-        }
-    }
-}
-
-private struct AddMedicationSheet: View {
-    @Environment(\.modelContext) private var context
-    @Environment(\.dismiss)      private var dismiss
-    @State private var type = GLP1MedicationType.semaglutide
-    @State private var dose = 1.0
-    @State private var date = Date.now
-
-    var body: some View {
-        NavigationStack {
-            Form {
-                Section("Medication") {
-                    Picker("Type", selection: $type) {
-                        ForEach(GLP1MedicationType.allCases) {
-                            Text($0.rawValue).tag($0)
-                        }
-                    }
-                    Picker("Dose", selection: $dose) {
-                        ForEach(type.availableDoses, id: \.self) {
-                            Text("\($0.formatted()) mg").tag($0)
-                        }
-                    }
-                }
-                Section("Injection Date & Time") {
-                    DatePicker("Date", selection: $date)
-                }
-            }
-            .navigationTitle("Log Injection")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") {
-                        context.insert(MedicationLog(date: date, doseMg: dose, medicationType: type.rawValue))
-                        try? context.save()
-                        dismiss()
-                    }
-                    .fontWeight(.semibold)
-                }
-            }
-        }
-        .onChange(of: type) { dose = type.availableDoses.first ?? 1.0 }
     }
 }
 

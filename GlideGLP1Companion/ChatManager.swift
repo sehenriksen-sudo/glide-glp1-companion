@@ -111,8 +111,8 @@ final class ChatManager {
 
     private var currentRoomId: String?
 
-    private let db      = Firestore.firestore()
-    private let storage = Storage.storage()
+    private var db:      Firestore { Firestore.firestore() }
+    private var storage: Storage   { Storage.storage() }
 
     // MARK: Authentication
 

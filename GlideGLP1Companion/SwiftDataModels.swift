@@ -66,8 +66,8 @@ final class MedicationLog {
     func asMedication() -> GLP1Medication {
         GLP1Medication(
             medicationType: type ?? .semaglutide,
-            shotDate:        date,
             doseMg:          doseMg,
+            shotDate:        date,
             halfLifeDays:    type?.typicalHalfLifeDays ?? 5.0
         )
     }

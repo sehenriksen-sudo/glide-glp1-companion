@@ -183,16 +183,17 @@ struct PaywallView: View {
             }
             .frame(maxWidth: .infinity)
             .frame(height: 54)
-            .background(
-                purchasePackage == nil
-                    ? Color.secondary
-                    : LinearGradient(
-                        colors: [.blue, .indigo],
-                        startPoint: .leading,
-                        endPoint: .trailing
-                    ),
-                in: RoundedRectangle(cornerRadius: 16, style: .continuous)
-            )
+            .background {
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .fill(purchasePackage == nil
+                        ? AnyShapeStyle(Color.secondary)
+                        : AnyShapeStyle(LinearGradient(
+                            colors: [.blue, .indigo],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                          ))
+                    )
+            }
             .foregroundStyle(.white)
         }
         .disabled(store.isLoading || purchasePackage == nil)

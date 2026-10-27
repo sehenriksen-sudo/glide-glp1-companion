@@ -180,7 +180,6 @@ final class SpotlightManager {
         attrs.thumbnailData    = sfSymbolPNG("fork.knife", color: .systemOrange)
         attrs.domainIdentifier = SpotlightType.food
         attrs.startDate        = log.timestamp
-        attrs.calendarItemIdentifier = log.id.uuidString
 
         return CSSearchableItem(
             uniqueIdentifier: spotlightID(type: SpotlightType.food, id: log.id),

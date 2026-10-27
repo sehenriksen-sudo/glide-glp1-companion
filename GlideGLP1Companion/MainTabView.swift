@@ -68,51 +68,46 @@ struct MainTabView: View {
         ZStack(alignment: .bottom) {
             // ── Tab content ───────────────────────────────────────────────
             TabView(selection: selectedTabBinding) {
-                Tab(.home) {
-                    DashboardView()
-                }
-                Tab(.medication) {
-                    // Sheet presented here so it survives tab switches
-                    MedicationView()
-                        .sheet(isPresented: Binding(
-                            get: { router.presentLogShot },
-                            set: { router.presentLogShot = $0 }
-                        )) {
-                            AddMedicationSheet()
-                        }
-                }
-                Tab(.nutrition) {
-                    NutritionView()
-                        .sheet(isPresented: Binding(
-                            get: { router.presentLogMeal },
-                            set: { router.presentLogMeal = $0 }
-                        )) {
-                            AddFoodSheet()
-                        }
-                }
-                Tab(.exercise) {
-                    ExerciseLogView()
-                        .sheet(isPresented: Binding(
-                            get: { router.presentLogExercise },
-                            set: { router.presentLogExercise = $0 }
-                        )) {
-                            AddExerciseSheet()
-                        }
-                }
-                Tab(.community) {
-                    CommunityView()
-                }
-                Tab(.settings) {
-                    SettingsView()
-                        .sheet(isPresented: Binding(
-                            get: { router.presentNotifSettings },
-                            set: { router.presentNotifSettings = $0 }
-                        )) {
-                            NavigationStack { NotificationSettingsView() }
-                        }
-                }
+                DashboardView()
+                    .tabItem { Label(AppTab.home.label, systemImage: AppTab.home.icon) }
+                    .tag(AppTab.home)
+
+                MedicationView()
+                    .sheet(isPresented: Binding(
+                        get: { router.presentLogShot },
+                        set: { router.presentLogShot = $0 }
+                    )) { AddMedicationSheet() }
+                    .tabItem { Label(AppTab.medication.label, systemImage: AppTab.medication.icon) }
+                    .tag(AppTab.medication)
+
+                NutritionView()
+                    .sheet(isPresented: Binding(
+                        get: { router.presentLogMeal },
+                        set: { router.presentLogMeal = $0 }
+                    )) { AddFoodSheet() }
+                    .tabItem { Label(AppTab.nutrition.label, systemImage: AppTab.nutrition.icon) }
+                    .tag(AppTab.nutrition)
+
+                ExerciseLogView()
+                    .sheet(isPresented: Binding(
+                        get: { router.presentLogExercise },
+                        set: { router.presentLogExercise = $0 }
+                    )) { AddExerciseSheet() }
+                    .tabItem { Label(AppTab.exercise.label, systemImage: AppTab.exercise.icon) }
+                    .tag(AppTab.exercise)
+
+                CommunityView()
+                    .tabItem { Label(AppTab.community.label, systemImage: AppTab.community.icon) }
+                    .tag(AppTab.community)
+
+                SettingsView()
+                    .sheet(isPresented: Binding(
+                        get: { router.presentNotifSettings },
+                        set: { router.presentNotifSettings = $0 }
+                    )) { NavigationStack { NotificationSettingsView() } }
+                    .tabItem { Label(AppTab.settings.label, systemImage: AppTab.settings.icon) }
+                    .tag(AppTab.settings)
             }
-            .tabViewStyle(.tabBarOnly)
             .tint(router.selectedTab.color)
 
             // ── Custom floating tab bar ───────────────────────────────────
@@ -135,14 +130,6 @@ struct MainTabView: View {
     // Badge on Nutrition when no meals logged today
     private var nutritionBadgeCount: Int {
         foods.filter { Calendar.current.isDateInToday($0.timestamp) }.isEmpty ? 1 : 0
-    }
-}
-
-// MARK: - Tab convenience init
-
-private extension Tab {
-    init(_ tab: AppTab, @ViewBuilder content: () -> Content) where Label == SwiftUI.Label<Text, Image> {
-        self.init(tab.label, systemImage: tab.icon, value: tab, content: content)
     }
 }
 

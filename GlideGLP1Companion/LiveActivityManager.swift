@@ -74,9 +74,8 @@ final class LiveActivityManager {
         let attrs   = activity.attributes
         let state   = attrs.currentContentState()
         let content = ActivityContent(
-            state:        state,
-            staleDate:    state.staleDate,
-            relevantDate: .now
+            state:     state,
+            staleDate: state.staleDate
         )
 
         await activity.update(content)

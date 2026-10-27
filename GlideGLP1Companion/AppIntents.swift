@@ -23,7 +23,7 @@ struct LogShotIntent: AppIntent {
 
     @MainActor
     func perform() async throws -> some IntentResult {
-        DeepLinkRouterStore.shared.router?.route(to: .logShot)
+        DeepLinkRouterStore.shared.router?.handle(url: URL(string: "glide://medication/log")!)
         return .result()
     }
 }
@@ -48,7 +48,7 @@ struct CheckConcentrationIntent: AppIntent {
         let conc       = snapshot.concentration()
         let percent    = Int(conc * 100)
         let isRisk     = conc < 0.40
-        let status     = isRisk ? "food noise zone" : "protected zone"
+
         let crossover  = snapshot.crossoverDate
         let daysLeft   = max(0, crossover.timeIntervalSinceNow / 86_400)
 
@@ -106,7 +106,7 @@ struct LogMealIntent: AppIntent {
 
     @MainActor
     func perform() async throws -> some IntentResult {
-        DeepLinkRouterStore.shared.router?.route(to: .logMeal)
+        DeepLinkRouterStore.shared.router?.handle(url: URL(string: "glide://nutrition/log")!)
         return .result()
     }
 }
@@ -122,7 +122,7 @@ struct LogWorkoutIntent: AppIntent {
 
     @MainActor
     func perform() async throws -> some IntentResult {
-        DeepLinkRouterStore.shared.router?.route(to: .logExercise)
+        DeepLinkRouterStore.shared.router?.handle(url: URL(string: "glide://exercise/log")!)
         return .result()
     }
 }
@@ -165,8 +165,8 @@ struct GlideShortcuts: AppShortcutsProvider {
             intent: CheckConcentrationIntent(),
             phrases: [
                 "Check my \(.applicationName) concentration",
-                "What's my GLP-1 level",
-                "What's my Ozempic concentration",
+                "What's my GLP-1 level in \(.applicationName)",
+                "What's my Ozempic concentration in \(.applicationName)",
                 "Check my medication level in \(.applicationName)",
             ],
             shortTitle: "Check Concentration",
@@ -176,7 +176,7 @@ struct GlideShortcuts: AppShortcutsProvider {
             intent: FoodNoiseStatusIntent(),
             phrases: [
                 "Am I in food noise in \(.applicationName)",
-                "Check food noise status",
+                "Check food noise status in \(.applicationName)",
                 "Is my \(.applicationName) concentration low",
             ],
             shortTitle: "Food Noise Status",
@@ -187,7 +187,7 @@ struct GlideShortcuts: AppShortcutsProvider {
             phrases: [
                 "Log my shot in \(.applicationName)",
                 "Log my injection in \(.applicationName)",
-                "I just took my GLP-1",
+                "I just took my GLP-1 in \(.applicationName)",
             ],
             shortTitle: "Log Injection",
             systemImageName: "syringe.fill"
@@ -214,22 +214,6 @@ struct GlideShortcuts: AppShortcutsProvider {
 }
 
 // MARK: - Router bridge for App Intents
-// App Intents run in a separate process so they can't access @Environment.
-// This singleton is set by GlideApp.onAppear and lets intents call route(to:).
-
-extension DeepLinkRouter {
-    func route(to link: DeepLink) {
-        // Re-use the existing private route logic by calling handle(url:)
-        let path: String
-        switch link {
-        case .logShot:     path = "glide://medication/log"
-        case .logMeal:     path = "glide://nutrition/log"
-        case .logExercise: path = "glide://exercise/log"
-        default:           path = "glide://home"
-        }
-        if let url = URL(string: path) { handle(url: url) }
-    }
-}
 
 final class DeepLinkRouterStore {
     static let shared = DeepLinkRouterStore()

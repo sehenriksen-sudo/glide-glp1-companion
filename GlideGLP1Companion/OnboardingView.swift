@@ -448,7 +448,7 @@ private struct LastShotStep: View {
 
                 // Live preview
                 let days = max(0, Date.now.timeIntervalSince(date) / 86_400)
-                let med  = GLP1Medication(medicationType: medicationType, shotDate: date, doseMg: 1.0,
+                let med  = GLP1Medication(medicationType: medicationType, doseMg: 1.0, shotDate: date,
                                           halfLifeDays: medicationType.typicalHalfLifeDays)
                 let conc = med.remainingConcentration().fraction
 

@@ -369,8 +369,8 @@ struct MedicationConcentrationChart: View {
     let shot = Calendar.current.date(byAdding: .day, value: -5, to: .now)!
     let med  = GLP1Medication(
         medicationType: .semaglutide,
-        shotDate:        shot,
         doseMg:          1.0,
+        shotDate:        shot,
         halfLifeDays:    7.0     // clinical semaglutide half-life
     )
     return MedicationConcentrationChart(medication: med)
@@ -382,8 +382,8 @@ struct MedicationConcentrationChart: View {
     let shot = Calendar.current.date(byAdding: .day, value: -4, to: .now)!
     let med  = GLP1Medication(
         medicationType: .tirzepatide,
-        shotDate:        shot,
         doseMg:          5.0,
+        shotDate:        shot,
         halfLifeDays:    5.0     // clinical tirzepatide half-life
     )
     return MedicationConcentrationChart(medication: med)
@@ -394,8 +394,8 @@ struct MedicationConcentrationChart: View {
 #Preview("Shot day — no vulnerability yet") {
     let med = GLP1Medication(
         medicationType: .semaglutide,
-        shotDate:        .now,
         doseMg:          0.5,
+        shotDate:        .now,
         halfLifeDays:    7.0
     )
     return MedicationConcentrationChart(medication: med)

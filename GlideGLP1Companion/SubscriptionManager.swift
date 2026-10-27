@@ -141,13 +141,17 @@ final class SubscriptionManager {
 
         } catch let err as SubscriptionError {
             throw err
-        } catch ErrorCode.productAlreadyPurchasedError {
-            // Edge case: already owns this product — treat as success.
-            return true
-        } catch ErrorCode.purchaseCancelledError {
-            throw SubscriptionError.cancelled
-        } catch ErrorCode.networkError {
-            throw SubscriptionError.network(underlying: error)
+        } catch let err as ErrorCode {
+            switch err {
+            case .productAlreadyPurchasedError:
+                return true
+            case .purchaseCancelledError:
+                throw SubscriptionError.cancelled
+            case .networkError:
+                throw SubscriptionError.network(underlying: err)
+            default:
+                throw SubscriptionError.unknown(underlying: err)
+            }
         } catch {
             throw SubscriptionError.unknown(underlying: error)
         }
@@ -161,8 +165,11 @@ final class SubscriptionManager {
 
         do {
             customerInfo = try await Purchases.shared.restorePurchases()
-        } catch ErrorCode.networkError {
-            throw SubscriptionError.network(underlying: error)
+        } catch let err as ErrorCode {
+            switch err {
+            case .networkError: throw SubscriptionError.network(underlying: err)
+            default:            throw SubscriptionError.unknown(underlying: err)
+            }
         } catch {
             throw SubscriptionError.unknown(underlying: error)
         }
@@ -195,8 +202,10 @@ extension StoreProduct {
     /// Percentage saved versus a reference monthly price (0–100).
     func savingsPercent(comparedToMonthlyPrice monthlyPrice: Decimal) -> Int? {
         guard let ppm = pricePerMonth, monthlyPrice > 0 else { return nil }
-        let ratio     = NSDecimalNumber(decimal: ppm / monthlyPrice).doubleValue
-        let percent   = (1.0 - ratio) * 100.0
+        let ppmDouble      = (ppm as NSDecimalNumber).doubleValue
+        let monthlyDouble  = (monthlyPrice as NSDecimalNumber).doubleValue
+        guard monthlyDouble > 0 else { return nil }
+        let percent        = (1.0 - ppmDouble / monthlyDouble) * 100.0
         return percent > 0 ? Int(percent.rounded()) : nil
     }
 }
