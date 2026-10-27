@@ -16,8 +16,9 @@ build/
 # CocoaPods (not used, but just in case)
 Pods/
 
-# Firebase — GoogleService-Info.plist contains API keys; add your own
-GoogleService-Info.plist
+# Firebase — replace the placeholder with your real GoogleService-Info.plist
+# (the real file is gitignored; the placeholder is committed)
+# GoogleService-Info.plist
 
 # Environment / secrets
 *.env

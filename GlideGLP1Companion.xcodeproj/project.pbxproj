@@ -30,6 +30,7 @@
 		53D67B70AD243AFAC417835F /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698B44DB0ECDED1B794DDFAA /* HealthKitManager.swift */; };
 		5B39EF3B9D0DF05EC33F7EAB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C2976915DB7FEAF25D05BE /* SettingsView.swift */; };
 		5EBEF952184F7A9D827638C2 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 2F5A0C0C530E7CC6334E4725 /* RevenueCat */; };
+		6036A7428BFAD024B7F27E80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E81609E33380B2426781163 /* GoogleService-Info.plist */; };
 		67B1F5E18DB8C4DA5A7DCAFF /* SharedMedicationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44527F3982794BF66C141FF7 /* SharedMedicationStore.swift */; };
 		6FD2F7471BA421E2E2CBF1B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48252A2EF19A6614605D2FA /* Assets.xcassets */; };
 		7D11C880A9DB8C84DC2113BB /* ExerciseLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004842FCD6B964E771676408 /* ExerciseLogView.swift */; };
@@ -84,6 +85,7 @@
 /* Begin PBXFileReference section */
 		004842FCD6B964E771676408 /* ExerciseLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLogView.swift; sourceTree = "<group>"; };
 		0C32FF0675EDE9EB8CD126B5 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		0E81609E33380B2426781163 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10AFC9FEC85A336C07404372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		115D521871A0511A5F6B95BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1F023C11695BDB570CDB24E5 /* GlideGLP1Companion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GlideGLP1Companion.entitlements; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				442366E60C5D6426DCF92D09 /* GlideAppDelegate.swift */,
 				1F023C11695BDB570CDB24E5 /* GlideGLP1Companion.entitlements */,
 				292D0A612EB1A71765AA955B /* GLP1Medication.swift */,
+				0E81609E33380B2426781163 /* GoogleService-Info.plist */,
 				DBAEE024AB0E9A8FE803F88A /* HapticManager.swift */,
 				698B44DB0ECDED1B794DDFAA /* HealthKitManager.swift */,
 				4F4B0E3F767A9EC66C378135 /* Info.plist */,
@@ -306,10 +309,10 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					0466C5241A6F61AA20CE6185 = {
-						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
 					};
 					40A3803CA79C9E5BEBBFDCCA = {
-						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D2F719A035A79916C759FA9 /* Assets.xcassets in Resources */,
+				6036A7428BFAD024B7F27E80 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,10 +475,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -538,10 +542,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
